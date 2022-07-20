@@ -21,8 +21,25 @@
     }else if(guess == location3){
         hits = hits + 1;
     }
-    alert(hits);
-    console.log(hits);
+    //alert(hits);
+    //console.log(hits);
+
+    var i = 1;
+    var text;
+    while (i < 10) {
+      text += "The number is " + i;
+      i++;
+    }
+    console.log(text);
+
+    while(isSunk == false){
+        guess = prompt("Ready");
+        if(guess < 0 || guess > 6){
+            alert("Please enter a valid cell number")
+        }else{
+            guesses = guesses + 1;
+        }
+    }
 </script>
 </body>
 </html>
