@@ -91,18 +91,83 @@
     // let trim_str = str.trim();
     // console.log(trim_str)
 
-    function bark(name, weight){
-        if(weight > 20){
-            console.log(name + " says woof")
-        }else{
-            console.log(name + " says woof else")
+    // function bark(name, weight){
+    //     if(weight > 20){
+    //         console.log(name + " says woof")
+    //     }else{
+    //         console.log(name + " says woof else")
+    //     }
+    // }
+    // bark("rover", 23);
+    // bark("spot", 13);
+    // bark("lady", 17);
+
+    // var student = "krissy";
+    // var status = "existinguser"
+    // var year = 2005;
+
+    // saveMyProfile(student, year, 381/100, status = "new");
+    // function saveMyProfile(name, birthday, GPA, newuser){
+    //     if(birthday >= 2004){
+    //         document.write("Here is the profile of " + status);
+    //     }
+    // }
+
+    // function makeTea(cups, tea){
+    //     console.log("Brewing" + cups + tea);
+    // }
+    // makeTea(3);
+
+    // function bake(degrees){
+    //     var message;
+    //     if(degrees > 500){
+    //         message = "test1";
+    //     }
+    //     else if(degrees < 100){
+    //         message = "test2";
+    //     }
+    //     else{
+    //         message = "test else";
+    //         //setMode("bake");
+    //         //setTemp(degrees)
+    //     }
+    //     return message;
+    // }
+
+    // var status = bake(510);
+    // console.log(status);
+
+    var avatar = "generic";
+    var skill = 1.0;
+    var pointsPerLevel = 1000;
+    var userPoints = 2008;
+    function getAvatar(points){
+        var level = points / pointsPerLevel;
+
+        if(level == 0){
+            return "test";
+        }
+        else if(level == 1){
+            return "cat";
+        }
+        else if(level >= 2){
+            return "cat23";
         }
     }
-    bark("rover", 23);
-    bark("spot", 13);
-    bark("lady", 17);
 
+    function updatePoints(bonus, newPoints){
+        var i = 0;
+        while (i < bonus){
+            newPoints = newPoints + skill * bonus;
+            i = i + 1;
+        }
+        return newPoints + userPoints;
+    }
 
+    userPoints = updatePoints(2, 100);
+    avatar = getAvatar(userPoints);
+    console.log(userPoints);
+    console.log(avatar);
 </script>
 </body>
 </html>
