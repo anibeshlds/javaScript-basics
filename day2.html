@@ -137,37 +137,71 @@
     // var status = bake(510);
     // console.log(status);
 
-    var avatar = "generic";
-    var skill = 1.0;
-    var pointsPerLevel = 1000;
-    var userPoints = 2008;
-    function getAvatar(points){
-        var level = points / pointsPerLevel;
+    // var avatar = "generic";
+    // var skill = 1.0;
+    // var pointsPerLevel = 1000;
+    // var userPoints = 2008;
+    // function getAvatar(points){
+    //     var level = points / pointsPerLevel;
 
-        if(level == 0){
-            return "test";
-        }
-        else if(level == 1){
-            return "cat";
-        }
-        else if(level >= 2){
-            return "cat23";
+    //     if(level == 0){
+    //         return "test";
+    //     }
+    //     else if(level == 1){
+    //         return "cat";
+    //     }
+    //     else if(level >= 2){
+    //         return "cat23";
+    //     }
+    // }
+
+    // function updatePoints(bonus, newPoints){
+    //     var i = 0;
+    //     while (i < bonus){
+    //         newPoints = newPoints + skill * bonus;
+    //         i = i + 1;
+    //     }
+    //     return newPoints + userPoints;
+    // }
+
+    // userPoints = updatePoints(2, 100);
+    // avatar = getAvatar(userPoints);
+    // console.log(userPoints);
+    // console.log(avatar);
+
+    function clunk(times){
+        var num = times;
+        while (num > 0){
+            display("clunk");
+            num = num - 1;
         }
     }
-
-    function updatePoints(bonus, newPoints){
-        var i = 0;
-        while (i < bonus){
-            newPoints = newPoints + skill * bonus;
-            i = i + 1;
+    function thingamajig(size){
+        var facky = 1;
+        clunkCounter = 0;
+        if(size == 0){
+            display("clank");
         }
-        return newPoints + userPoints;
-    }
+        else if(size == 1){
+            display("thunk");
+        }
+        else{
 
-    userPoints = updatePoints(2, 100);
-    avatar = getAvatar(userPoints);
-    console.log(userPoints);
-    console.log(avatar);
+            while(size > 1){
+                facky = facky * size;
+                size = size - 1;
+            }
+            //console.log(facky);
+            clunk(facky);
+        }
+    }
+    function display(output){
+        //console.log(output);
+        clunkCounter = clunkCounter + 1;
+    }
+    var clunkCounter = 0;
+    thingamajig(5);
+    //console.log(clunkCounter);
 </script>
 </body>
 </html>
