@@ -70,9 +70,22 @@
 
     let person = {
         'firstName': 'anibesh',
-        lastName: 'thapa'
+        lastName: 'thapa',
+        sayHello (){
+            console.log("Hello ! " + this['firstName'] );
+        }
     };
-     console.log(person);
+
+    person.age = 25;
+
+    for(let key in person){
+        console.log(key + ": " + person[key]);
+    }
+
+
+    person.sayHello();
+
+    //console.log(person);
 
 </script>
 </body>
