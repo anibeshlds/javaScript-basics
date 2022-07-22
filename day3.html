@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Basic Js</title>
+</head>
+<body>
+
+<script>
+    let book = ['Math', 'Science', 'Computer'];
+    // let name = new Array('ram', 'hari', 'shyam')
+    // console.log(name);
+    // console.log(name[1]);
+
+    //book.shift();
+    
+    book.splice(1, 1);
+    let position = book.indexOf('Math');
+    //console.log(position);
+
+
+    let text = "this is test text";
+    let wordarray = text.split(' ');
+    //console.log(wordarray);
+
+    let newArray = book.concat(book, wordarray);
+    console.log(newArray);
+
+</script>
+</body>
+</html>
