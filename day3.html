@@ -7,24 +7,55 @@
 <body>
 
 <script>
-    let book = ['Math', 'Science', 'Computer'];
-    // let name = new Array('ram', 'hari', 'shyam')
-    // console.log(name);
-    // console.log(name[1]);
+   
+    let name = new Array('ram', 'hari', 'shyam');
+    // let namelength = name.length;
+    // for(i=0; i<namelength; i++){
+    //     console.log(name[i]);
+    // }
+    
 
     //book.shift();
     
-    book.splice(1, 1);
-    let position = book.indexOf('Math');
-    //console.log(position);
+    // book.splice(1, 1);
+    // let position = book.indexOf('Math');
+    // //console.log(position);
 
 
-    let text = "this is test text";
-    let wordarray = text.split(' ');
-    //console.log(wordarray);
+    // let text = "this is test text";
+    // let wordarray = text.split(' ');
+    // //console.log(wordarray);
 
-    let newArray = book.concat(book, wordarray);
-    console.log(newArray);
+    // let newArray = book.concat(book, wordarray);
+    // console.log(newArray);
+
+    //  let book = [
+    //     ['Math', 'Science', 'Computer'],
+    //     ['Physic', 'Bio'],
+    //     ['300', '400']
+    // ]
+
+    // console.log(book[1][0]);
+
+    // name.forEach(myfu);
+    // function myfu(value){
+    //     console.log(value);
+    // }
+
+    // function Mutable(nitem){
+    //     for(i=1; i<=10; i++){
+    //         document.write(`${nitem} x ${i} = ${nitem*i}`);
+    //         document.write('<br>');
+    //     }
+    // }
+
+    // Mutable(2);
+    //  Mutable(5);
+
+    function sum(first, second){
+        document.write(first + second);
+    }
+    sum(2, 5);
 
 </script>
 </body>
